@@ -15,10 +15,9 @@ let server = http.createServer(function (request, response) {
   if (pathWithQuery.indexOf('?') >= 0) {
     queryString = pathWithQuery.substring(pathWithQuery.indexOf('?'))
   }
-  let path = parsedUrl.pathname
-  let query = parsedUrl.query
+  let path = parsedUrl.pathname // string
+  let query = parsedUrl.query // object
   let method = request.method
-  console.log(typeof path, path)
 
   console.log('有个傻子发请求过来啦！路径（带查询参数）为： ' + pathWithQuery)
 
